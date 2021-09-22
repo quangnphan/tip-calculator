@@ -1,13 +1,175 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Space Mono";
+  font-size: 24px;
+  background: hsl(185, 41%, 84%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.logo {
+  display: flex;
+  margin: 0 auto 30px;
+}
+.calc {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  max-width: 1000px;
+}
+form {
+  padding-right: 50px;
+}
+label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-self: center;
+  position: relative;
+  margin-bottom: 1.3rem;
+}
+label h4 {
+  color: hsl(186, 14%, 43%);
+  font-size: 1rem;
+}
+.input-container {
+  background-color: hsl(189, 41%, 97%);
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-radius: 0.2rem;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+input {
+  text-align: right;
+  cursor: pointer;
+  font-weight: 700;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  font-size: 24px;
+  border: 1px solid transparent;
+  background-color: hsl(189, 41%, 97%);
+  width: 100%;
+  color: hsl(183, 100%, 15%);
+}
+input[type="number"]:focus {
+  background-image: none;
+  box-shadow: none;
+  outline: none;
+}
+input::placeholder {
+  color: hsl(184, 14%, 56%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.select-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.7rem;
+}
+.btn {
+  background-color: hsl(183, 100%, 15%);
+  height: 40px;
+  color: #fff;
+  font-size: clamp(1.2rem, 5vw, 1.4rem);
+  font-weight: 700;
+  border: 0;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.custom {
+  height: 40px;
+  border-radius: 0.3rem;
+  transition: all 0.2s;
+  padding-right: 15px;
+}
+.screen {
+  background-color: hsl(183, 100%, 15%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 700px;
+  height: 350px;
+  overflow: hidden;
+}
+.amount-result,
+.total-result {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.screen h3{
+  color: #fff;
+  font-size: 0.9rem;
+}
+.screen h4{
+  color: hsl(184, 14%, 56%);
+  font-size: 0.7rem;
+}
+.screen h1{
+  font-size: 2.5rem;
+  padding-left: 60px;
+  color: hsl(172, 67%, 45%);
+}
+.result{
+  margin-bottom: 50px;
+}
+.reset{
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  width: 100%;
+  border-radius: 8px;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  padding: 0.7rem;
+  cursor: pointer;
+}
+
+@media (max-width:500px){
+  body{
+    height: auto;
+  }
+  .calc{
+    max-width: none;
+    flex-direction: column;
+  }
+  .logo{
+    margin: 80px auto;
+  }
+  form{
+    padding-right: 0;
+  }
+  .screen{
+    width: 350px;
+    height: 350px;
+  }
+  .select-container{
+    grid-template-columns: 1fr 1fr;
+  }
 }

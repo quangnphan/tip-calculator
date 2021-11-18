@@ -61,7 +61,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 input {
   text-align: right;
-  cursor: pointer;
   font-weight: 700;
 }
 input[type="number"] {
@@ -123,23 +122,23 @@ input::placeholder {
   justify-content: space-between;
   margin-bottom: 1rem;
 }
-.screen h3{
+.screen h3 {
   color: #fff;
   font-size: 0.9rem;
 }
-.screen h4{
+.screen h4 {
   color: hsl(184, 14%, 56%);
   font-size: 0.7rem;
 }
-.screen h1{
+.screen h1 {
   font-size: 2.5rem;
   padding-left: 60px;
   color: hsl(172, 67%, 45%);
 }
-.result{
+.result {
   margin-bottom: 50px;
 }
-.reset{
+.reset {
   border: none;
   outline: none;
   font-size: 1.5rem;
@@ -150,26 +149,30 @@ input::placeholder {
   padding: 0.7rem;
   cursor: pointer;
 }
+button:hover{
+  opacity: 0.8;
+}
 
-@media (max-width:500px){
-  body{
+@media (max-width: 600px) {
+  body {
     height: auto;
   }
-  .calc{
+  .calc {
     max-width: none;
     flex-direction: column;
+    width: 90%;
+    margin: 30px auto;
   }
-  .logo{
+  .logo {
     margin: 80px auto;
   }
-  form{
+  form {
     padding-right: 0;
   }
-  .screen{
-    width: 350px;
-    height: 350px;
+  .screen {
+    width: 100%;
   }
-  .select-container{
+  .select-container {
     grid-template-columns: 1fr 1fr;
   }
 }
